@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Sustainable-X</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome To Sustainable-X</h1>
+        <p>Let’s make a move towards Sustainability. Thanks for believing in us!!</p>
+        <div class="left-section">
+            <div class="box" id="date">Date: {{ date }}</div>
+            <div class="box" id="time">Time: {{ time }}</div>
+            <div class="box" id="weather">Weather: {{ weather }}</div>
+            <div class="box" id="off-peak">Off-Peak Hours: {{ off_peak_hours }}</div>
+            <div class="box" id="peak">Peak Hours: {{ peak_hours }}</div>
+            <button class="report-button" onclick="window.location.href='/report'">User Report</button>
+        </div>
+        <div class="right-section">
+            <div class="box">Current Pricing: Rs {{ current_price }}</div>
+            <div class="box">Upcoming Pricing: Rs {{ upcoming_prices }}</div>
+            <div class="notification">{{ notification }}</div>
+            <!-- Added link and text below notification -->
+            <p>You can only check the price of 2024.</p>
+            <p><a href="https://future-price-predictions.onrender.com" target="_blank">Click here to check future pricing</a></p>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

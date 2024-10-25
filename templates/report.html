@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <h1>User Energy Report</h1>
+    <h2>Daily Message: {{ daily_message }}</h2>
+    <h3>Weekly Cost: {{ weekly_cost }}</h3>
+    
+    <!-- If you're displaying the monthly costs -->
+    <h3>Monthly Costs:</h3>
+    <ul>
+        {% for i, cost in enumerate(monthly_costs) %}
+        <li>Month {{ i + 1 }}: Rs {{ cost }}</li> <!-- Now using enumerate -->
+        {% endfor %}
+    </ul>
+
+    <!-- Display Graphs -->
+    <img src="{{ url_for('static', filename='daily_graph.png') }}" alt="Daily Graph">
+    <img src="{{ url_for('static', filename='weekly_graph.png') }}" alt="Weekly Graph">
+    <img src="{{ url_for('static', filename='monthly_graph.png') }}" alt="Monthly Graph">
+</body>
+</html>
+
